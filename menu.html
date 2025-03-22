@@ -1,0 +1,49 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CarePlate Menu</title>
+        <link rel="stylesheet" href="menu.css">
+    </head>
+    <body>
+        
+        <nav class="nav">
+            <div class="logo"><a href="index.html">CarePlate</a></div>
+            <ul>
+                <li><img src="assets/meal-menu-2-svgrepo-com.svg" alt="Menu Icon"> <a href="menu.html">Menu</a></li>
+                <li><img src="assets/shopping-cart-01-stroke-rounded.svg" alt="Cart Icon"><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="menu-section">
+                <h2>Our Menu</h2>
+                <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search dishes for your health goals (e.g., weight gain,heart health,diabetes)" onkeyup="searchMenu()">
+        </div>
+                <div class="button-group">
+                    <button class="menu-category" data-category="all">All</button>
+                    <button class="menu-category" data-category="gluten-free">Gluten-free</button>
+                    <button class="menu-category" data-category="vegan">Vegan</button>
+                    <button class="menu-category" data-category="low-carb">Low Carb</button>
+                    <button class="menu-category" data-category="dairy-free">Dairy-free</button>
+                </div>
+                <div class="secondary-button-group">
+                    <button class="menu-category" data-category="kids-favorites">Kids Favorites</button>
+                    <button class="menu-category" data-category="patient-specials">Patient Specials</button>
+                    <button class="menu-category" data-category="healthy-snacks">Healthy Snacks</button>
+                    <button class="menu-category" data-category="recovery-meals">Recovery Meals</button>
+                    <button class="menu-category" data-category="smoothies">Smoothies</button>
+                </div>
+
+                <!-- Menu cards will be loaded here -->
+                <div class="menu-container" id="menu"></div>
+                
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+    </html>

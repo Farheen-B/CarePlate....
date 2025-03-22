@@ -1,0 +1,354 @@
+/* Import Google Font at the top */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset some basic styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F0F8F4;
+    color: #333;
+}
+
+/* Navbar Styling */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav .logo a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #4CAF50;
+}
+.nav ul li a.active {
+    background-color: #4CAF50; /* Green background */
+    color: white !important; /* White text */
+    border-radius: 5px; /* Rounded edges */
+    padding: 10px 15px; /* Adjust padding */
+    text-decoration: none;
+}
+
+/* Main section */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    margin-top: 20px;
+
+}
+
+/* Styling for menu category buttons */
+.menu-category {
+    color: black;
+    padding: 12px 30px;
+ 
+    border-radius: 25px;
+    border: 2px solid rgb(157, 180, 157);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-category:hover {
+    background-color:#4CAF50; /* Darker green on hover */
+
+}
+.menu-category.active {
+    background-color: #4CAF50; /* Active button color */
+    color: white;
+    border-color: #4CAF50; /* Change border color */
+}
+
+
+
+
+
+/* Menu Container */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: max-height 1s ease-in-out;
+    max-height: 400px; /* Default height */
+}
+
+.card.expanded {
+    max-height: 900px; /* Expands smoothly */
+}
+
+.details {
+    display: none; /* Initially hidden */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.card.expanded .details {
+    display: block; /* Show when expanded */
+    opacity: 1;
+}
+
+.toggle-details {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.toggle-details:hover {
+    background-color: #0056b3;
+}
+
+
+.card:hover {
+    transition: 0.4s ease-in-out;
+    transform: scale(1.05); /* Subtle hover effect */
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-content {
+    padding: 10px;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #388e3c;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.nutrition-info {
+    margin: 10px 0;
+}
+
+.nutrition-info h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Progress Bar Styling */
+.nutrition-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 5px;
+    background: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 10px;
+}
+
+.progress {
+    height: 100%;
+    background: #4CAF50;
+    border-radius: 5px;
+}
+
+/* Price & Button */
+.price {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.button {
+    width: 100%;
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+    border: none;
+}
+
+.button:hover {
+    background: #388e3c;
+}
+.secondary-button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: flex-start; /* or center, if you want them centered */
+}
+
+.secondary-button-group button {
+    background-color: #ffffff;  /* White background */
+    color:black;                /* Dark text */
+    border: 1px solid #ddd;     /* Light gray border */
+    border-radius: 15px;        /* Rounded edges for a pill-like shape */
+    padding: 16px 20px;          /* Spacing around text */
+    font-size: 1rem;
+    font-family:sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.secondary-button-group button:hover {
+    background-color:#4CAF50; /* Slightly darker background on hover */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.secondary-button-group button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.4); /* Green focus ring */
+}
+@media (max-width:480px){
+   .button-group .menu-category{ 
+    font-size: 0.5rem;
+    min-width: 15%;
+    padding: 6px 6px;
+}
+.secondary-button-group .menu-category{
+    font-size: 0.5rem;
+    min-width: 15%;
+    padding: 6px 3px;
+    font-weight: 400;
+    border-radius: 4px;
+}
+.card{
+    min-width:  300px;
+    padding: 10px;
+
+}
+.menu-container{
+    justify-content: center;
+}
+}
+.search-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#searchBar {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+@media (max-width: 768px) {
+    #searchBar {
+        width: 80%; /* Adjust width on smaller screens */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    #searchBar {
+        width: 90%; /* Further adjust width on very small screens */
+        font-size: 12px; /* Further adjust font size */
+    }
+}
+.hidden {
+    display: none;
+}
+
+.toggle-details {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.toggle-details:hover {
+    background-color: #0056b3;
+}
+
